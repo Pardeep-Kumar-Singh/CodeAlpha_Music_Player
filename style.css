@@ -1,0 +1,151 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #a4c0db;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+.player-container {
+  height: 500px;
+  width: 400px;
+  background: #e4e4e4;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.img-container {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  position: relative;
+  top: -50px;
+  left: 50px;
+}
+
+.img-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+h2 {
+  font-size: 25px;
+  text-align: center;
+  margin: 0;
+}
+
+h3 {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 400;
+  margin: 5px 0 0;
+}
+.progress-container {
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 40px 20px;
+  height: 6px;
+  width: 90%;
+}
+
+.progress {
+  background: #242323;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.duration-wrapper {
+  position: relative;
+  top: -25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.player-controls {
+  position: relative;
+  top: -15px;
+  left: 120px;
+  width: 200px;
+}
+
+.fas {
+  font-size: 30px;
+  color: rgb(129, 129, 129);
+  margin-right: 30px;
+  cursor: pointer;
+  user-select: none;
+  transition: ease 0.2s;
+}
+
+.fas:hover {
+  transition: ease 0.2s;
+  filter: brightness(60%);
+}
+
+.main-button {
+  font-size: 40px;
+  position: relative;
+  top: 3px;
+}
+
+@media (max-width: 468px) {
+  .player-container {
+    height: auto;
+    margin-left: 220px;
+  }
+
+  .img-container {
+    position: relative;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  .player-controls {
+    top: -10px;
+    left: 75px;
+  }
+  .lyric{
+    display: none;
+  }
+}
+
+.lyric{
+  height: 480px;
+  width: 480px;
+  background-image: url(https://static.vecteezy.com/system/resources/previews/009/380/929/non_2x/record-disk-clipart-design-illustration-free-png.png);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  margin-left: 400px;
+  animation: rotate 5s infinite;
+  animation-delay: 5ms;
+}
+@keyframes rotate {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
